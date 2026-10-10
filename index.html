@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Mewar Palace & Resort | In-Room & Dining Menu</title>
-  <!-- Security Headers -->
+  <title>The Mewar Palace & Resort | Restaurant Menu</title>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com https://fonts.gstatic.com;">
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0F0F0F; color: #E5E5E5; }
@@ -20,94 +17,104 @@
 </head>
 <body class="pb-20 max-w-md mx-auto min-h-screen border-x border-neutral-800 relative">
 
-  <!-- TOP HEADER -->
+  <!-- TOP HEADER (Cleaned up as per owner's request) -->
   <header class="text-center pt-6 pb-4 px-4 bg-neutral-900/90 sticky top-0 z-30 border-b border-neutral-800 backdrop-blur-md">
-    <span class="text-[10px] tracking-[0.3em] uppercase gold-text font-semibold">Shivpuri, MP</span>
-    <h1 class="serif text-xl font-bold text-white tracking-wide">The Mewar Palace</h1>
-    <p class="text-[11px] text-neutral-400 italic">& Resort • Royal Dining</p>
+    <h1 class="serif text-xl font-bold text-white tracking-wide">The Mewar Palace & Resort</h1>
+    <p class="text-xs gold-text font-medium tracking-wider mt-0.5">RESTAURANT MENU</p>
   </header>
 
-  <!-- STEP 1: CATEGORY SELECTION HUB -->
-  <section id="step1Hub" class="px-5 pt-6 space-y-5">
+  <!-- STEP 1: INITIAL SELECTION HUB -->
+  <section id="step1Hub" class="px-5 pt-6 space-y-6">
     <div class="text-center space-y-1">
-      <h2 class="serif text-lg text-amber-400 font-semibold">Welcome to Royal Dining</h2>
-      <p class="text-xs text-neutral-400">Select a category to explore our culinary creations</p>
+      <h2 class="serif text-lg text-amber-400 font-semibold">Welcome to Dining</h2>
+      <p class="text-xs text-neutral-400">Select a category to explore our culinary options</p>
     </div>
 
     <!-- Category Grid -->
-    <div class="grid grid-cols-2 gap-3 pt-2">
-      <button onclick="selectCategory('breakfast')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+    <div class="grid grid-cols-2 gap-3.5 pt-2">
+      <!-- Breakfast -->
+      <button onclick="selectCategory('breakfast')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">☕</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Breakfast</h3>
-        <p class="text-[10px] text-neutral-400">07:30 AM - 10:30 AM</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Breakfast</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">07:30 AM – 10:30 AM</p>
       </button>
 
-      <button onclick="selectCategory('mewar_special')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-amber-900/50 text-left hover:border-amber-500/50 transition group">
-        <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 mb-2">👑</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Mewar Thali</h3>
-        <p class="text-[10px] text-neutral-400">Royal Specialities</p>
+      <!-- Mewar Thali Special -->
+      <button onclick="selectCategory('thali')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-amber-900/50 text-left hover:border-amber-500/50 transition duration-200 group">
+        <div class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">👑</div>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Mewar Thali</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Royal Specialities</p>
       </button>
 
-      <button onclick="selectCategory('starters')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+      <!-- Starters -->
+      <button onclick="selectCategory('starters')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🍢</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Starters</h3>
-        <p class="text-[10px] text-neutral-400">Tandoori & Kebabs</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Starters</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Tandoori & Kebabs</p>
       </button>
 
-      <button onclick="selectCategory('soups_salads')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-emerald-900/40 text-left hover:border-emerald-500/50 transition group">
-        <div class="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2">🥗</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-emerald-400">Soups & Salads</h3>
-        <p class="text-[10px] text-neutral-400">Healthy & Light Options</p>
+      <!-- Soups & Salads -->
+      <button onclick="selectCategory('soups')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
+        <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🥗</div>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Soups & Salads</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Healthy & Light Options</p>
       </button>
 
-      <button onclick="selectCategory('indian_main')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+      <!-- Indian Main Course -->
+      <button onclick="selectCategory('indian_main')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🍲</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Indian Main</h3>
-        <p class="text-[10px] text-neutral-400">Paneer, Veg & Dal</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Indian Main</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Paneer, Veg & Dal</p>
       </button>
 
-      <button onclick="selectCategory('chinese')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+      <!-- Chinese -->
+      <button onclick="selectCategory('chinese')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🍜</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Chinese</h3>
-        <p class="text-[10px] text-neutral-400">Noodles & Rice</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Chinese</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Noodles & Rice</p>
       </button>
 
-      <button onclick="selectCategory('italians')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+      <!-- Italian -->
+      <button onclick="selectCategory('italian')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🍕</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Italian</h3>
-        <p class="text-[10px] text-neutral-400">Pizza, Pasta, Burgers</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Italian</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Pizza, Pasta, Burgers</p>
       </button>
 
-      <button onclick="selectCategory('breads_rice')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+      <!-- Breads & Rice -->
+      <button onclick="selectCategory('breads_rice')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🫓</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Breads & Rice</h3>
-        <p class="text-[10px] text-neutral-400">Roti, Naan, Biryani</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Breads & Rice</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Roti, Naan, Biryani</p>
       </button>
 
-      <button onclick="selectCategory('beverages')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+      <!-- Beverages -->
+      <button onclick="selectCategory('beverages')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🍹</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Beverages</h3>
-        <p class="text-[10px] text-neutral-400">Cold Drinks & Shakes</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Beverages</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Cold Drinks & Shakes</p>
       </button>
 
-      <button onclick="selectCategory('desserts')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-3.5 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition group">
+      <!-- Desserts -->
+      <button onclick="selectCategory('desserts')" class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-4 rounded-xl border border-neutral-800 text-left hover:border-amber-500/50 transition duration-200 group">
         <div class="w-8 h-8 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-amber-400 mb-2">🍨</div>
-        <h3 class="text-xs font-semibold text-white group-hover:text-amber-400">Desserts</h3>
-        <p class="text-[10px] text-neutral-400">Halwai Ka Pyaar</p>
+        <h3 class="text-sm font-semibold text-white group-hover:text-amber-400 transition">Desserts</h3>
+        <p class="text-[10px] text-neutral-400 mt-0.5">Halwa, Ice Creams</p>
       </button>
     </div>
 
     <!-- View Full Menu Button -->
     <div class="pt-2 text-center">
       <button onclick="selectCategory('all')" class="w-full py-3 bg-amber-500 hover:bg-amber-400 text-black font-semibold rounded-xl text-xs tracking-wider uppercase transition">
-        Browse Complete Menu
+        Browse Full Menu
       </button>
     </div>
   </section>
 
   <!-- STEP 2: MENU DISPLAY PAGE -->
   <section id="step2Menu" class="hidden">
-    <div class="px-4 pt-4 sticky top-[73px] z-20 bg-neutral-900/95 pb-3 border-b border-neutral-800 backdrop-blur-md space-y-3">
+    <!-- Back & Search Controls -->
+    <div class="px-4 pt-4 sticky top-[72px] z-20 bg-neutral-900/95 pb-3 border-b border-neutral-800 backdrop-blur-md space-y-3">
       <div class="flex items-center justify-between gap-2">
         <button onclick="showHub()" class="flex items-center gap-1.5 text-xs text-amber-400 font-medium">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
@@ -116,9 +123,9 @@
         <span id="activeFilterBadge" class="text-[11px] bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full border border-neutral-700 font-medium">Viewing All</span>
       </div>
 
-      <!-- Search Input -->
+      <!-- Search Bar -->
       <div class="relative">
-        <input type="text" id="searchInput" onkeyup="searchMenu()" placeholder="Search dishes (e.g. Paneer, Dal, Shake)..." 
+        <input type="text" id="searchInput" onkeyup="searchMenu()" placeholder="Search dishes (e.g. Paneer, Dal, Lassi)..." 
                class="w-full bg-neutral-800/90 text-xs text-white placeholder-neutral-500 rounded-full py-2 pl-9 pr-4 border border-neutral-700 focus:outline-none focus:border-amber-500">
         <svg class="w-4 h-4 text-neutral-500 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -126,185 +133,116 @@
       </div>
     </div>
 
-    <!-- Items List -->
+    <!-- Items List Container -->
     <div id="menuContainer" class="px-4 pt-4 space-y-3"></div>
   </section>
 
   <!-- Footer Notice -->
   <footer class="text-center text-neutral-500 text-[10px] mt-10 mb-6 px-4 space-y-1">
-    <div class="flex items-center justify-center gap-1 text-emerald-400">
-      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-      <span>Verified Digital Menu</span>
-    </div>
-    <p>All prices exclusive of applicable taxes. Please allow 15-20 mins for preparation.</p>
+    <p>Please allow us 15-20 minutes to prepare your dish fresh.</p>
+    <p>All prices are exclusive of government taxes.</p>
   </footer>
 
   <script>
     const menuData = [
-      // Breakfast Delicacy
-      { name: "Coffee", price: "₹90", desc: "", cat: "breakfast" },
-      { name: "Masala Tea", price: "₹70", desc: "", cat: "breakfast" },
-      { name: "Hot Chocolate", price: "₹140", desc: "", cat: "breakfast" },
-      { name: "Hot Milk", price: "₹80", desc: "", cat: "breakfast" },
-      { name: "Seasonal Fresh Juice", price: "₹160", desc: "", cat: "breakfast" },
-      { name: "Seasonal Fresh Fruit Platter", price: "₹160", desc: "", cat: "breakfast" },
-      { name: "Poha", price: "₹120", desc: "", cat: "breakfast" },
-      { name: "Upma", price: "₹120", desc: "", cat: "breakfast" },
-      { name: "Poori Bhaji", price: "₹140", desc: "", cat: "breakfast" },
-      { name: "Sprouts Chaat", price: "₹140", desc: "Healthy mixed sprouts tossed with fresh vegetables and seasoning.", cat: "breakfast" },
-      { name: "Sauteed Vegetables", price: "₹190", desc: "Fresh seasonal vegetables sautéed in butter and herbs.", cat: "breakfast" },
-      { name: "Idli Sambar", price: "₹140", desc: "Soft steamed idli served with hot sambar and coconut chutney.", cat: "breakfast" },
-      { name: "Chole Kulcha", price: "₹310", desc: "Soft kulcha served with spicy punjabi chole, onion salad, pickle & butter.", cat: "breakfast" },
-      { name: "Choice of Paratha (Aloo / Gobhi / Plain)", price: "₹170", desc: "", cat: "breakfast" },
-      { name: "Cereals with Milk (Choco Flakes / Corn Flakes)", price: "₹110", desc: "Choice of hot or cold milk.", cat: "breakfast" },
-      { name: "Butter Toast / Butter Jam Toast", price: "₹80 - ₹90", desc: "2 pcs of toasted bread.", cat: "breakfast" },
-      { name: "Millet Khichdi", price: "₹250", desc: "", cat: "breakfast" },
+      // BREAKFAST
+      { name: "Coffee", price: "₹90", desc: "Fresh hot coffee", cat: "breakfast" },
+      { name: "Masala Tea", price: "₹70", desc: "Traditional aromatic spiced tea", cat: "breakfast" },
+      { name: "Hot Chocolate", price: "₹140", desc: "Rich hot chocolate", cat: "breakfast" },
+      { name: "Hot Milk", price: "₹80", desc: "Fresh hot milk", cat: "breakfast" },
+      { name: "Seasonal Fresh Juice", price: "₹160", desc: "Freshly squeezed seasonal fruit juice", cat: "breakfast" },
+      { name: "Seasonal Fresh Fruit Platter", price: "₹160", desc: "Assorted seasonal fresh cut fruits", cat: "breakfast" },
+      { name: "Poha", price: "₹120", desc: "Flattened rice cooked with spices & herbs", cat: "breakfast" },
+      { name: "Upma", price: "₹120", desc: "Traditional semolina breakfast dish", cat: "breakfast" },
+      { name: "Poori Bhaji", price: "₹140", desc: "Fluffy fried pooris served with spicy potato gravy", cat: "breakfast" },
+      { name: "Sprouts Chaat", price: "₹140", desc: "Healthy mixed sprouts tossed with fresh vegetables and seasoning", cat: "breakfast" },
+      { name: "Sauteed Vegetables", price: "₹190", desc: "Fresh seasonal vegetables sautéed in butter and herbs", cat: "breakfast" },
+      { name: "Idli Sambar", price: "₹140", desc: "Soft steamed idlis served with hot sambar and coconut chutney", cat: "breakfast" },
+      { name: "Chole Kulcha", price: "₹310", desc: "Soft kulcha served with spicy Punjabi chole, onion salad, pickle & butter", cat: "breakfast" },
+      { name: "Choice of Paratha", price: "₹170", desc: "Aloo, Gobhi, or Plain Paratha served hot", cat: "breakfast" },
+      { name: "Choice of Cereals with Milk", price: "₹110", desc: "Choco flakes or Corn flakes served with hot or cold milk", cat: "breakfast" },
+      { name: "Butter Toast / Butter Jam", price: "₹80 / ₹90", desc: "2 pcs of toasted bread served with butter or jam", cat: "breakfast" },
+      { name: "Millet Khichdi", price: "₹250", desc: "Wholesome and healthy millet khichdi", cat: "breakfast" },
 
-      // Soups & Salads
-      { name: "Cream of Almond and Broccoli Soup", price: "₹290", desc: "Thick and creamy soup made of broccoli stalks and almonds.", cat: "soups_salads" },
-      { name: "Drum Stick Soup", price: "₹280", desc: "Light and healthy soup made with fresh drumsticks, mild spices, and herbs.", cat: "soups_salads" },
-      { name: "Thow Vegetable Soup", price: "₹270", desc: "Flavorful mix of fresh vegetables, herbs, and mild spices in aromatic broth.", cat: "soups_salads" },
-      { name: "Dal Shorba", price: "₹230", desc: "Rich lentil preparation with fresh ginger, traditional spices, and herbs.", cat: "soups_salads" },
-      { name: "Hot & Sour Soup", price: "₹220", desc: "Spicy and hot soup mixed with fresh vegetables, mushroom, and soya sauce.", cat: "soups_salads" },
-      { name: "Manchow Soup", price: "₹220", desc: "Vegetable soup mixed with ginger, garlic, soya sauce & ground pepper.", cat: "soups_salads" },
-      { name: "Palak Tomato Soup", price: "₹220", desc: "Blend of fresh spinach, tomatoes, ginger, and aromatic spices.", cat: "soups_salads" },
-      { name: "Tamatar Dhaniya Ka Shorba", price: "₹220", desc: "Lightly spiced hot soup of tomatoes flavored with fresh coriander.", cat: "soups_salads" },
-      { name: "Cream of Tomato Soup", price: "₹220", desc: "Creamy tomato soup made of fresh & juicy tomatoes.", cat: "soups_salads" },
-      { name: "Classic Minestrone Soup", price: "₹220", desc: "Delicious soup with pasta, beans, tomatoes & Italian herbs.", cat: "soups_salads" },
-      { name: "Green Salad", price: "₹110", desc: "", cat: "soups_salads" },
-      { name: "Russian Salad", price: "₹190", desc: "Assortment of vegetables served with mayonnaise dressing.", cat: "soups_salads" },
-      { name: "Greek Salad", price: "₹190", desc: "Tomatoes, cucumber, onion, olives with feta cheese & olive oil dressing.", cat: "soups_salads" },
-      { name: "Tangy Potato Salad", price: "₹170", desc: "German red potatoes mixed with vinegar & sour cream.", cat: "soups_salads" },
-      { name: "Sprouts Salad", price: "₹180", desc: "Sprouted mung beans with diced tomatoes, cucumber & onion.", cat: "soups_salads" },
-      { name: "Peanut Masala", price: "₹230", desc: "", cat: "soups_salads" },
+      // THALI
+      { name: "Mewar Special Thali", price: "₹440", desc: "Kadhai Paneer + Aloo Gobhi Adraki + Dal Tadka + Jeera Rice + 3 Tandoori Roti + Butter Milk", cat: "thali", tag: "Popular" },
+      { name: "Shahi Thali", price: "₹540", desc: "Paneer Butter Masala + Subz Kolhapuri + Dal Makhani + Raita + Choice of Breads + Peas Pulao + Gulab Jamun + Butter Milk", cat: "thali", tag: "Royal Special" },
 
-      // Starters & Sizzlers
-      { name: "Paneer Tikka (Achari / Hariyali / Malai)", price: "₹320", desc: "Homemade cottage cheese marinated with hung curd & Indian spices.", cat: "starters" },
-      { name: "Tandoori Mushroom (Malai / Masala)", price: "₹320", desc: "Mushroom marinated with chef special spices cooked in clay oven.", cat: "starters" },
-      { name: "Tandoori Malai Broccoli", price: "₹390", desc: "Cream coated broccoli flavored with spices and roasted in clay oven.", cat: "starters" },
-      { name: "Seekh Kebab", price: "₹310", desc: "Minced veggies grilled on skewers in clay oven.", cat: "starters" },
-      { name: "Dahi Ke Shole", price: "₹350", desc: "Creamy hung curd, cottage cheese & veggies filled deep fried bread pockets.", cat: "starters" },
-      { name: "Hara Bhara Kebab", price: "₹280", desc: "Deep fried patties of spinach, green peas & potatoes.", cat: "starters" },
-      { name: "Tandoori Chaap (Malai / Masala)", price: "₹320", desc: "Soya chunks marinated with chef special spices cooked in clay oven.", cat: "starters" },
-      { name: "Cheese Balls", price: "₹320", desc: "Deep fried croquettes of cheesy fillings enhanced with mashed potato.", cat: "starters" },
-      { name: "Golden Crispy Corn", price: "₹270", desc: "Deep fried tangy & spicy sweet corn kernels.", cat: "starters" },
-      { name: "Potato Barbecue", price: "₹340", desc: "Crispy potatoes topped with mildly spiced paneer stuffing & herbs.", cat: "starters" },
-      { name: "Paneer Franky", price: "₹370", desc: "Flavorful wrap filled with soft paneer, fresh vegetables, and mild spices.", cat: "starters" },
-      { name: "Vegetable Spring Roll", price: "₹280", desc: "Deep fried roll of minced veggies mixed with spices.", cat: "starters" },
-      { name: "Aloo Nazakat", price: "₹310", desc: "Exquisite and elegant North Indian vegetarian starter.", cat: "starters" },
-      { name: "Cheese Cigar Roll", price: "₹360", desc: "Cheddar and home cottage cheese filled roll.", cat: "starters" },
-      { name: "Korean Potato", price: "₹260", desc: "Soft, tender insides with rich, flavorful glazes.", cat: "starters" },
-      { name: "Veg Lollipop", price: "₹360", desc: "Seasoned mixed vegetable balls deep-fried until crispy.", cat: "starters" },
-      { name: "Chinese Sizzler", price: "₹440", desc: "Choice of Manchurian Noodles & Honey Chili Potato OR Chili Paneer & Fried Rice.", cat: "starters" },
-      { name: "Tandoori Sizzler", price: "₹460", desc: "Mix of Paneer Tikka, Malai Broccoli & Seekh Kebab on hot platter.", cat: "starters" },
-      { name: "Sizzling Paneer Tikka", price: "₹440", desc: "Paneer tikka served on a hot sizzling platter.", cat: "starters" },
+      // STARTERS
+      { name: "Paneer Tikka (Achari / Hariyali / Malai)", price: "₹320", desc: "Cottage cheese marinated with hung curd & Indian spices cooked in tandoor", cat: "starters" },
+      { name: "Tandoori Mushroom (Malai / Masala)", price: "₹320", desc: "Mushroom marinated with chef special spices cooked in clay oven", cat: "starters" },
+      { name: "Tandoori Malai Broccoli", price: "₹390", desc: "Cream coated broccoli flavored with spices and roasted in clay oven", cat: "starters" },
+      { name: "Seekh Kebab", price: "₹310", desc: "Minced veggies grilled on skewers in clay oven", cat: "starters" },
+      { name: "Dahi Ke Shole", price: "₹350", desc: "Creamy hung curd, cottage cheese & veggies filled deep fried pockets", cat: "starters" },
+      { name: "Hara Bhara Kebab", price: "₹280", desc: "Deep fried patties of spinach, green peas & potatoes", cat: "starters" },
+      { name: "Tandoori Chaap (Malai / Masala)", price: "₹320", desc: "Soya chunks marinated with special spices cooked in tandoor", cat: "starters" },
+      { name: "Cheese Balls", price: "₹320", desc: "Deep fried croquettes with cheesy filling & mashed potato", cat: "starters" },
+      { name: "Golden Crispy Corn", price: "₹270", desc: "Deep fried tangy & spicy sweet corn kernels", cat: "starters" },
+      { name: "Potato Barbecue", price: "₹340", desc: "Crispy potatoes with smoky red flavors, topped with paneer stuffing", cat: "starters" },
+      { name: "Vegetable Spring Roll", price: "₹280", desc: "Deep fried rolls filled with minced veggies and spices", cat: "starters" },
+      { name: "Cheese Cigar Roll", price: "₹360", desc: "Cheddar & cottage cheese filled golden crispy rolls", cat: "starters" },
 
-      // Mewar Special Thali
-      { name: "Mewar Thali", price: "₹440", desc: "Kadhai Paneer + Aloo Gobhi Adraki + Dal Tadka + Jeera Rice + 3 Tandoori Roti + Butter Milk.", cat: "mewar_special" },
-      { name: "Shahi Thali", price: "₹540", desc: "Paneer Butter Masala + Subz Kolhapuri + Dal Makhani + Raita + Choice of Breads + Peas Pulao + Gulab Jamun + Butter Milk.", cat: "mewar_special" },
+      // SOUPS & SALADS
+      { name: "Cream of Almond & Broccoli Soup", price: "₹290", desc: "Thick and creamy soup made of broccoli and almonds", cat: "soups" },
+      { name: "Dal Shorba", price: "₹230", desc: "Rich lentil preparation with fresh ginger & herbs", cat: "soups" },
+      { name: "Hot & Sour Soup", price: "₹220", desc: "Spicy soup with fresh vegetables & mushroom", cat: "soups" },
+      { name: "Manchow Soup", price: "₹220", desc: "Vegetable soup with ginger, garlic & soya sauce", cat: "soups" },
+      { name: "Tamatar Dhaniya Ka Shorba", price: "₹220", desc: "Lightly spiced hot tomato soup flavored with coriander", cat: "soups" },
+      { name: "Green Salad", price: "₹110", desc: "Fresh garden vegetables salad", cat: "soups" },
+      { name: "Sprouts Salad", price: "₹180", desc: "Sprouted mung beans with tomatoes, cucumber & onion", cat: "soups" },
+      { name: "Masala Papad", price: "₹65", desc: "Crispy papad topped with spicy onion-tomato salad", cat: "soups" },
 
-      // Italians
-      { name: "Margarita Pizza", price: "₹320", desc: "", cat: "italians" },
-      { name: "Farm Fresh Pizza", price: "₹370", desc: "", cat: "italians" },
-      { name: "Punjab to Paris Pizza", price: "₹410", desc: "", cat: "italians" },
-      { name: "Club Sandwich", price: "₹310", desc: "", cat: "italians" },
-      { name: "Bombay Masala Sandwich", price: "₹270", desc: "", cat: "italians" },
-      { name: "Crispy Paneer Burger", price: "₹280", desc: "", cat: "italians" },
-      { name: "Vegetable Burger", price: "₹270", desc: "", cat: "italians" },
-      { name: "Aloo Tikki Burger", price: "₹230", desc: "", cat: "italians" },
-      { name: "Cheese Chilli Toast", price: "₹310", desc: "", cat: "italians" },
-      { name: "Garlic Breads with Tomato Salsa", price: "₹310", desc: "", cat: "italians" },
-      { name: "Pasta (Alfredo / Arrabbiata / Pesto)", price: "₹290", desc: "", cat: "italians" },
+      // INDIAN MAIN COURSE
+      { name: "Paneer Butter Masala", price: "₹360", desc: "Cottage cheese cubes simmered in rich cashew butter & tomato gravy", cat: "indian_main", tag: "Popular" },
+      { name: "Kadhai Paneer", price: "₹360", desc: "Cottage cheese and bell peppers cooked with fresh ground spices", cat: "indian_main" },
+      { name: "Paneer Lababdar", price: "₹360", desc: "Cottage cheese in rich tomato & cashew gravy finished with fenugreek", cat: "indian_main" },
+      { name: "Paneer Tikka Masala", price: "₹410", desc: "Char-grilled cottage cheese cooked in spicy creamy gravy", cat: "indian_main" },
+      { name: "Paneer Begam Bahar", price: "₹470", desc: "Paneer stuffed fingers served with rich red & green gravy", cat: "indian_main" },
+      { name: "Malai Kofta", price: "₹350", desc: "Fried dumplings of cottage cheese & nuts simmered in creamy gravy", cat: "indian_main" },
+      { name: "Bhindi Masala", price: "₹310", desc: "Fresh okra cooked with onions, tomatoes and Indian spices", cat: "indian_main" },
+      { name: "Kaju Curry", price: "₹440", desc: "Cashew nuts cooked in rich tangy and sweet gravy", cat: "indian_main" },
+      { name: "Dal Makhani", price: "₹310", desc: "Black lentils slow cooked with spices, butter & cream", cat: "indian_main", tag: "Bestseller" },
+      { name: "Dal Tadka", price: "₹250", desc: "Yellow lentils tempered with garlic, cumin and spices", cat: "indian_main" },
+      { name: "Mewar Special Dal", price: "₹350", desc: "Black lentils cooked with chef's secret spices", cat: "indian_main" },
 
-      // Chinese Main
-      { name: "Chilli Paneer", price: "₹350", desc: "Crispy fried cottage cheese tossed with bell peppers & green chilies.", cat: "chinese" },
-      { name: "Chilli Mushroom", price: "₹350", desc: "White button mushroom tossed with hot chili sauce.", cat: "chinese" },
-      { name: "Vegetable Manchurian", price: "₹320", desc: "Mixed vegetable dumplings tossed with sweet & hot manchurian sauce.", cat: "chinese" },
-      { name: "Schezwan Paneer", price: "₹350", desc: "Cottage cheese tossed in schezwan sauce.", cat: "chinese" },
-      { name: "Paneer 65", price: "₹350", desc: "Deep fried cottage cheese tossed in garlic, curry leaves & yogurt.", cat: "chinese" },
-      { name: "Sweet & Sour Vegetables", price: "₹350", desc: "Stir fried vegetables with sweet & sour sauce.", cat: "chinese" },
-      { name: "Hakka Noodles", price: "₹310", desc: "Indo-Chinese stir fried noodles with bell peppers, onion & cabbage.", cat: "chinese" },
-      { name: "Schezwan Noodles", price: "₹320", desc: "Flavorful, spicy & hot noodles made using schezwan sauce.", cat: "chinese" },
-      { name: "Singapore Noodles", price: "₹320", desc: "Thin rice vermicelli tossed with soy sauce & vegetables.", cat: "chinese" },
-      { name: "Chilly Garlic Noodles", price: "₹330", desc: "Wok-tossed noodles flavored with chilli and fresh garlic.", cat: "chinese" },
-      { name: "Vegetable Fried Rice", price: "₹290", desc: "Stir fried rice with soya sauce & vegetables.", cat: "chinese" },
-      { name: "Schezwan Rice", price: "₹290", desc: "Stir fried rice & vegetables tossed with hot schezwan sauce.", cat: "chinese" },
-      { name: "Burnt Garlic Rice", price: "₹290", desc: "Fried rice made of mix vegetable, soya sauce & brown garlic.", cat: "chinese" },
+      // CHINESE
+      { name: "Chilli Paneer", price: "₹350", desc: "Crispy fried cottage cheese tossed with bell peppers & green chillies", cat: "chinese" },
+      { name: "Vegetable Manchurian", price: "₹320", desc: "Fried veggie dumplings tossed in Manchurian sauce", cat: "chinese" },
+      { name: "Hakka Noodles", price: "₹310", desc: "Stir-fried noodles tossed with bell peppers, onion & cabbage", cat: "chinese" },
+      { name: "Chilly Garlic Noodles", price: "₹330", desc: "Wok-tossed noodles with chilli and fresh garlic", cat: "chinese" },
+      { name: "Vegetable Fried Rice", price: "₹290", desc: "Stir-fried rice with soya sauce & fresh vegetables", cat: "chinese" },
+      { name: "Schezwan Rice", price: "₹290", desc: "Spicy stir-fried rice tossed with hot Schezwan sauce", cat: "chinese" },
 
-      // Indian Main Course
-      { name: "Paneer Begam Bahar", price: "₹470", desc: "Paneer stuffed fingers served with rich red and green gravy.", cat: "indian_main" },
-      { name: "Kuchi Paneer", price: "₹430", desc: "Soft paneer cooked in rich badami gravy with mild spices.", cat: "indian_main" },
-      { name: "Paneer Angara", price: "₹440", desc: "Smoky paneer served sizzling with flavorful gravy.", cat: "indian_main" },
-      { name: "Handi Paneer", price: "₹430", desc: "Soft paneer cooked in rich handi gravy with traditional flavors.", cat: "indian_main" },
-      { name: "Paneer Khurchan", price: "₹430", desc: "Shredded paneer cooked with rich gravy, capsicum, and tomatoes.", cat: "indian_main" },
-      { name: "Paneer Do Pyaza", price: "₹410", desc: "Soft paneer cooked with double onions in rich gravy.", cat: "indian_main" },
-      { name: "Paneer Egg Curry (Veg)", price: "₹370", desc: "Paneer cooked in rich creamy gravy with traditional Indian flavors.", cat: "indian_main" },
-      { name: "Paneer Butter Masala", price: "₹360", desc: "Cottage cheese cubes simmered in rich cashew butter & tomato gravy.", cat: "indian_main" },
-      { name: "Paneer Tikka Masala", price: "₹410", desc: "Char grilled marinated cottage cheese cooked in spicy creamy gravy.", cat: "indian_main" },
-      { name: "Kadhai Paneer", price: "₹360", desc: "Cottage cheese and bell peppers cooked with fresh ground spices.", cat: "indian_main" },
-      { name: "Paneer Patiala", price: "₹360", desc: "Cottage cheese rolls slow simmered in rich and creamy gravy.", cat: "indian_main" },
-      { name: "Paneer Kaleji", price: "₹360", desc: "Rich and spicy paneer cubes cooked with onions and bold spices.", cat: "indian_main" },
-      { name: "Lehsuni Palak Paneer", price: "₹380", desc: "Tender cottage cheese cooked with spinach gravy and garlic.", cat: "indian_main" },
-      { name: "Paneer Lababdar", price: "₹360", desc: "Cottage cheese simmered in spiced tomato and cashew gravy.", cat: "indian_main" },
-      { name: "Paneer Pasanda", price: "₹360", desc: "Shallow fried stuffed cottage cheese cooked in creamy gravy.", cat: "indian_main" },
-      { name: "Malai Kofta", price: "₹350", desc: "Fried dumplings of veggies & nuts in rich creamy gravy.", cat: "indian_main" },
-      { name: "Veg. Palak Kofta", price: "₹340", desc: "Spinach kofta balls served in rich and creamy gravy.", cat: "indian_main" },
-      { name: "Stuffed Tomato / Capsicum", price: "₹340", desc: "Filled with flavorful vegetable stuffing in rich gravy.", cat: "indian_main" },
-      { name: "Bhindi Masala", price: "₹310", desc: "Fresh okra cooked with onions, tomatoes and traditional spices.", cat: "indian_main" },
-      { name: "Kadai Gobhi", price: "₹320", desc: "Cauliflower cooked with capsicum, onions and Indian spices.", cat: "indian_main" },
-      { name: "Kaju Curry", price: "₹440", desc: "Cashew nuts cooked in rich tangy and sweet flavorful gravy.", cat: "indian_main" },
-      { name: "Subz Kolhapuri", price: "₹310", desc: "Farm fresh vegetables cooked with Kolhapur special spices.", cat: "indian_main" },
-      { name: "Mushroom Masala", price: "₹360", desc: "White button mushroom cooked in spiced onion & tomato gravy.", cat: "indian_main" },
-      { name: "Aloo Gobhi Adraki", price: "₹290", desc: "Potatoes, cauliflower and ginger tossed with aromatic spices.", cat: "indian_main" },
-      { name: "Kashmiri Dum Aloo (Banarasi / Punjabi)", price: "₹330", desc: "Baby potatoes cooked in rich cashew nut and yogurt gravy.", cat: "indian_main" },
-      { name: "Chole Masala", price: "₹320", desc: "Chickpeas cooked with Indian spices.", cat: "indian_main" },
-      { name: "Vegetable Dewani Handi", price: "₹310", desc: "Seasonal vegetables cooked in traditional yellow gravy.", cat: "indian_main" },
-      { name: "Veg Jaipuri", price: "₹320", desc: "Yellow gravy garnished with papad, mixed vegetables and mushroom.", cat: "indian_main" },
-      { name: "Corn Palak", price: "₹310", desc: "Sweet corn cooked with fresh spinach in creamy Indian gravy.", cat: "indian_main" },
-      { name: "Veg Mutton Chaap", price: "₹340", desc: "Soya chaap cooked in lightly spiced rich gravy.", cat: "indian_main" },
+      // ITALIAN
+      { name: "Margarita Pizza", price: "₹320", desc: "Classic cheese pizza with rich tomato sauce", cat: "italian" },
+      { name: "Farm Fresh Pizza", price: "₹370", desc: "Loaded with fresh vegetables and mozzarella cheese", cat: "italian" },
+      { name: "Club Sandwich", price: "₹310", desc: "Triple layered toasted sandwich with veggie fillings", cat: "italian" },
+      { name: "Crispy Paneer Burger", price: "₹280", desc: "Crispy paneer patty topped with fresh lettuce & sauces", cat: "italian" },
+      { name: "Pasta (Alfredo / Arrabbiata / Pesto)", price: "₹290", desc: "Choice of creamy Alfredo, spicy Arrabbiata or Pesto sauce", cat: "italian" },
 
-      // Dal & Indian Breads & Rice
-      { name: "Ghar Ki Dal", price: "₹230", desc: "Yellow lentils prepared with aromatic spices.", cat: "breads_rice" },
-      { name: "Dal Tadka Heeng Wali", price: "₹260", desc: "Yellow lentils seasoned with tomatoes, garlic and spiced ghee.", cat: "breads_rice" },
-      { name: "Dal Makhni", price: "₹310", desc: "Black lentils & kidney beans slow cooked with spices, butter & cream.", cat: "breads_rice" },
-      { name: "Dal Pahadi", price: "₹440", desc: "Traditional hill-style lentils cooked with Indian herbs and spices.", cat: "breads_rice" },
-      { name: "Rogani Rajma", price: "₹310", desc: "Red kidney beans cooked with onion, tomatoes and hot spices.", cat: "breads_rice" },
-      { name: "Mewar Special Dal", price: "₹350", desc: "Black lentils cooked with chef's secret spices.", cat: "breads_rice" },
-      { name: "Tandoori Roti (Plain / Butter)", price: "₹30 - ₹35", desc: "", cat: "breads_rice" },
-      { name: "Naan (Plain / Butter)", price: "₹60 - ₹70", desc: "", cat: "breads_rice" },
-      { name: "Garlic Naan", price: "₹80", desc: "", cat: "breads_rice" },
-      { name: "Garlic Laccha Paratha", price: "₹100", desc: "", cat: "breads_rice" },
-      { name: "Cheese Garlic Naan", price: "₹100", desc: "", cat: "breads_rice" },
-      { name: "Stuffed Kulcha", price: "₹80", desc: "", cat: "breads_rice" },
-      { name: "Kurkuri Naan", price: "₹80", desc: "", cat: "breads_rice" },
-      { name: "Pyaaj Ki Roti / Misi Roti", price: "₹60", desc: "", cat: "breads_rice" },
-      { name: "Bajre Ki Roti", price: "₹80", desc: "", cat: "breads_rice" },
-      { name: "Marwari Dum Biryani", price: "₹320", desc: "Slow cooked layered rice with vegetables and Marwar spices.", cat: "breads_rice" },
-      { name: "Vegetable Pulao", price: "₹260", desc: "", cat: "breads_rice" },
-      { name: "Kashmiri Pulao", price: "₹280", desc: "Delicious rice prepared with nuts, dried fruits, saffron & fresh fruits.", cat: "breads_rice" },
-      { name: "Dal Khichdi", price: "₹310", desc: "Classic Indian dish made of rice and lentils with clarified butter.", cat: "breads_rice" },
-      { name: "Jeera Rice", price: "₹260", desc: "", cat: "breads_rice" },
-      { name: "Steamed Rice", price: "₹220", desc: "", cat: "breads_rice" },
+      // BREADS & RICE
+      { name: "Marwari Dum Biryani", price: "₹320", desc: "Slow-cooked layered rice with vegetables & Marwari spices", cat: "breads_rice" },
+      { name: "Jeera Rice", price: "₹260", desc: "Aromatic basmati rice tempered with cumin seeds", cat: "breads_rice" },
+      { name: "Steamed Rice", price: "₹220", desc: "Fluffy steamed basmati rice", cat: "breads_rice" },
+      { name: "Tandoori Roti (Plain / Butter)", price: "₹30 / ₹35", desc: "Baked in traditional clay oven", cat: "breads_rice" },
+      { name: "Naan (Plain / Butter)", price: "₹60 / ₹70", desc: "Leavened flatbread baked in tandoor", cat: "breads_rice" },
+      { name: "Garlic Naan", price: "₹80", desc: "Flavored with fresh minced garlic and butter", cat: "breads_rice" },
+      { name: "Laccha Paratha", price: "₹60", desc: "Layered whole wheat bread baked in tandoor", cat: "breads_rice" },
 
-      // Beverages
-      { name: "Seasonal Fresh Juice", price: "₹130", desc: "", cat: "beverages" },
-      { name: "Milkshakes (Chocolate / Brownie / Strawberry / Mango)", price: "₹190", desc: "", cat: "beverages" },
-      { name: "Cold Coffee", price: "₹200", desc: "", cat: "beverages" },
-      { name: "Lassi (Sweet / Salted / Mango)", price: "₹200", desc: "", cat: "beverages" },
-      { name: "Buttermilk (Plain / Masala)", price: "₹90", desc: "", cat: "beverages" },
-      { name: "Aerated Beverages (Sprite / Coke / Fanta / Thumbs Up)", price: "₹70", desc: "", cat: "beverages" },
-      { name: "Red Bull", price: "₹260", desc: "", cat: "beverages" },
-      { name: "Fresh Lime Soda", price: "₹90", desc: "", cat: "beverages" },
-      { name: "Virgin Mojito / Virgin Colada / Blue Lagoon", price: "₹180", desc: "", cat: "beverages" },
+      // BEVERAGES
+      { name: "Lassi (Sweet / Salted / Mango)", price: "₹200", desc: "Thick chilled yoghurt blend", cat: "beverages" },
+      { name: "Cold Coffee", price: "₹200", desc: "Rich blended chilled coffee", cat: "beverages" },
+      { name: "Milkshakes (Chocolate / Brownie / Strawberry)", price: "₹190", desc: "Delicious rich milkshakes", cat: "beverages" },
+      { name: "Fresh Lime Soda", price: "₹90", desc: "Refreshing sweet or salted lime soda", cat: "beverages" },
+      { name: "Virgin Mojito", price: "₹180", desc: "Crushed mint, lime and sparkling soda", cat: "beverages" },
+      { name: "Buttermilk (Plain / Masala)", price: "₹90", desc: "Traditional refreshing chaas", cat: "beverages" },
 
-      // Desserts
-      { name: "Badam Ka Halwa", price: "₹220", desc: "Grounded almonds pudding with saffron & cardamom.", cat: "desserts" },
-      { name: "Moong Dal Halwa", price: "₹180", desc: "Traditional sweet lentil pudding cooked with clarified butter.", cat: "desserts" },
-      { name: "Malpua with Rabdi", price: "₹240", desc: "Shallow fried pancakes dipped in sugar syrup with thickened milk.", cat: "desserts" },
-      { name: "Gulab Jamun", price: "₹100", desc: "Milk solid balls soaked in saffron sweet syrup.", cat: "desserts" },
-      { name: "Chocolate Sizzling Brownie", price: "₹280", desc: "Served hot with ice-cream & sizzling chocolate syrup.", cat: "desserts" },
-      { name: "Choice of Ice Creams", price: "₹90", desc: "", cat: "desserts" },
-      { name: "Naturals Ice Cream", price: "₹230", desc: "", cat: "desserts" }
+      // DESSERTS
+      { name: "Badam Ka Halwa", price: "₹220", desc: "Grounded almonds cooked in pure ghee with saffron & cardamom", cat: "desserts" },
+      { name: "Moong Dal Halwa", price: "₹180", desc: "Rich pudding cooked with ghee and dry fruits", cat: "desserts" },
+      { name: "Malpua with Rabdi", price: "₹240", desc: "Sweet pancakes served with thick rabdi", cat: "desserts" },
+      { name: "Gulab Jamun", price: "₹100", desc: "Soft milk solid dumplings soaked in saffron syrup", cat: "desserts" },
+      { name: "Chocolate Sizzling Brownie", price: "₹280", desc: "Hot brownie with vanilla ice cream & sizzling chocolate syrup", cat: "desserts" }
     ];
 
     let activeCategory = 'all';
@@ -315,17 +253,17 @@
       document.getElementById('step2Menu').classList.remove('hidden');
       
       const badgeMap = {
-        'all': 'Viewing Complete Menu',
-        'breakfast': 'Breakfast Options',
-        'mewar_special': 'Mewar Thali Specials',
-        'starters': 'Starters & Kebabs',
-        'soups_salads': 'Soups & Salads',
-        'indian_main': 'Indian Main Course',
-        'chinese': 'Chinese Delicacies',
-        'italians': 'Italian Delights',
-        'breads_rice': 'Breads, Dal & Rice',
-        'beverages': 'Cold Beverages',
-        'desserts': 'Halwai Ka Pyaar (Desserts)'
+        'all': 'Viewing All',
+        'breakfast': 'Breakfast',
+        'thali': 'Mewar Thali',
+        'starters': 'Starters',
+        'soups': 'Soups & Salads',
+        'indian_main': 'Indian Main',
+        'chinese': 'Chinese',
+        'italian': 'Italian',
+        'breads_rice': 'Breads & Rice',
+        'beverages': 'Beverages',
+        'desserts': 'Desserts'
       };
       document.getElementById('activeFilterBadge').innerText = badgeMap[cat] || 'Menu';
 
@@ -350,15 +288,21 @@
       });
 
       if (filtered.length === 0) {
-        container.innerHTML = `<div class="text-center py-10 text-neutral-500 text-xs">No menu items found. Try another search.</div>`;
+        container.innerHTML = `<div class="text-center py-10 text-neutral-500 text-xs">No items found matching your search.</div>`;
         return;
       }
 
       container.innerHTML = filtered.map(item => `
         <div class="bg-neutral-900/80 p-3.5 rounded-xl border border-neutral-800 flex justify-between items-start gap-3">
           <div class="space-y-1 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-sm border border-green-500 flex items-center justify-center">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+              </span>
+              ${item.tag ? `<span class="text-[9px] bg-amber-500/10 text-amber-400 px-1.5 py-0.5 rounded border border-amber-500/20 font-medium">${item.tag}</span>` : ''}
+            </div>
             <h3 class="text-xs font-semibold text-white tracking-wide">${item.name}</h3>
-            ${item.desc ? `<p class="text-[11px] text-neutral-400 leading-relaxed">${item.desc}</p>` : ''}
+            <p class="text-[11px] text-neutral-400 leading-relaxed">${item.desc}</p>
             <span class="text-xs font-bold text-amber-400 inline-block pt-0.5">${item.price}</span>
           </div>
         </div>
